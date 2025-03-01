@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>À propos - BEAT</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="beat r.png" alt="Logo BEAT">
+            </a>
+    
+            <!-- Menu principal -->
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="A_propos.html" class="nav-link active">À propos</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+    
+            <!-- Bouton de menu mobile -->
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section principale -->
+    <main>
+        <!-- Section À propos -->
+        <section class="a-propos">
+            <div class="backgroundimage">
+                <h1 >À propos de BEAT</h1>
+                <p >Découvrez qui nous sommes, notre mission et notre engagement pour le développement technologique de la région.</p>
+                
+            </div>
+            <div class="container">
+                <!-- Section Mission -->
+                <div class="Mission">
+                    <div class="mission">
+                        <h2>Notre Mission</h2>
+                        <p>BEAT s'engage à fournir des solutions techniques innovantes et un accompagnement personnalisé pour soutenir le développement économique et social de Goma et du Nord-Kivu. Nous croyons en la puissance de la technologie pour transformer les défis en opportunités.</p>
+                    </div>
+                    <!--section tout savoir-->
+                    <div class="tout_savoir">
+                        <div class="branchr" id="climat">
+                            <h4>changement climatique</h4>
+                            <ul>
+                                <li>Évaluation de l'impact environnement des projets et des affaires</li>
+                                <li>Proposition des pratiques écologiques</li>
+                                <li>Coaching et mentorat sur la gestion sensible à l'environnement</li>
+                            </ul>
+                        </div>
+                        <div class="branchr" id="entrepreneuriat">
+                            <h4>entrepreneuriat</h4>
+                            <ul>
+                                <li>Accompagnement dans l'élaboration des plans d'affaires</li>
+                                <li>Proposition des méthodes de gestion inovante</li>
+                            </ul>
+                        </div>
+                        <div class="branchr" id="reduction">
+                            <h4>Réduction de Risques des Catastrophes</h4>
+                            <ul>
+                                <li>Modélisation de la surveillance des aléas</li>
+                                <li>Accompagnement des organisations dans la gestion sensible aux risques</li>
+                                <li>Proposition des méthodes de gestion inovante</li>
+                                <li>Development des outils d'analyse de vulnérabilités des enjeux et risques de catastrophes</li>
+                                <li>Formation dans la gestion de risques de catastrophes et des urgences</li> 
+                                <li>Appui à l'élaboration des plans de contigence</li>
+                                <li>Appui à l'élaboration de plans de continuité des affaires</li>
+                                <li>Élaboration des modules adaptés aux besoins dans le domaine de gestion des risques </li>
+                                <li>Accompagnement dans dans l'élaboration des plans et stratégies de sécurité des organisations et entreprises</li>
+                            </ul>
+                        </div>
+                        <div class="branchr" id="innovation">
+                            <h4>Innovation et technologie 
+                            </h4>
+                            <ul>
+                                <li>Accompagnement dans la pensée design</li>
+                                <li>Accompagnement dans l'utilisation éthique de l'intelligence artificielle</li>
+                                <li>Development des applications dans les domaines divers</li>
+                                <li>Accompagnement dans le Suivi à temps réel ( Real Time Monitoring)</li>
+                            </ul>
+                        </div>
+                        <div class="branchr" id="communication">
+                            <h4> Communication pour le changement de comportement
+                            </h4>
+                            <ul>
+                                <li>Development des modules adaptés aux besoins des divers groupes</li>
+                                <li>Accompagnement des groupes et des personnes à développer des plans visant le changement des comportements</li>
+                                <li>Coaching et mentorat dans la motivation des groupes</li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+    
+                    <!-- Section Équipe -->
+                    <div class="equipe">
+                        <h2>Notre Équipe</h2>
+                        <p>Notre équipe est composée d'experts certifiés dans divers domaines techniques, passionnés par l'innovation et déterminés à apporter des solutions concrètes aux problèmes locaux. Nous travaillons ensemble pour offrir des services de qualité et des résultats durables.</p>
+                    </div>
+                </div>
+                <!-- Section Formulaire d'inscription -->
+                <div class="formulaire-inscription">
+                    <h2>Inscrivez-vous à nos services</h2>
+                    <p>Vous souhaitez bénéficier de nos services ou en savoir plus ? Remplissez le formulaire ci-dessous et nous vous contacterons dans les plus brefs délais.</p>
+                    <form id="inscription-form">
+                        <div class="form-group">
+                            <label for="nom">Nom complet</label>
+                            <input type="text" id="nom" name="nom" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Adresse e-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service choisi</label>
+                            <select id="service" name="service" required>
+                                <option value="">Sélectionnez un service</option>
+                                <option value="environnement">Environnement et changement climatique</option>
+                                <option value="entrepreneuriat">Entrepreneuriat</option>
+                                <option value="risques">Réduction des risques de catastrophes</option>
+                                <option value="technologie">Innovation et technologie</option>
+                                <option value="communication">Communication pour le changement</option>
+                                <option value="protection">Protection des personnes et de l'environnement</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message (optionnel)</label>
+                            <textarea id="message" name="message" rows="5"></textarea>
+                        </div>
+                        <button type="submit" class="btn-inscription">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <!-- Section 1 : Logo et description -->
+            <div class="footer-section">
+                <img src="beat r.png" alt="Logo BEAT" class="footer-logo">
+                <p class="footer-description">
+                    BEAT est un bureau d'expertise et d'accompagnement technique basé à Goma, dédié à offrir des solutions innovantes pour le développement technologique de la région.
+                </p>
+            </div>
+    
+            <!-- Section 2 : Liens rapides -->
+            <div class="footer-section">
+                <h4>Liens rapides</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="A_propos.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+    
+            <!-- Section 3 : Coordonnées -->
+            <div class="footer-section">
+                <h4>Coordonnées</h4>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-map-marker-alt"></i> Goma, Nord-Kivu, RDC</li>
+                    <li><i class="fas fa-phone"></i> +243 995 277 023</li>
+                    <li><i class="fas fa-envelope"></i> beatexpertise@gmail.com</li>
+                </ul>
+            </div>
+    
+            <!-- Section 4 : Réseaux sociaux -->
+            <div class="footer-section">
+                <h4>Suivez-nous</h4>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Section 5 : Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2023 BEAT. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

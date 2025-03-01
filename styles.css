@@ -1,0 +1,907 @@
+/* Réinitialisation du margin et padding */
+:root {
+    --primary-color: #008cb6;
+    --secondary-color: #002366;
+    --font-family: 'Poppins', sans-serif;
+}
+.btn-decouvrir {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.btn-decouvrir:hover {
+    transform: scale(1.05);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style global */
+body {
+    background-color: #ffffff;
+    line-height: 1.6;
+    font-family: "Poppins", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    color: #575a7b;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+/* Header */
+.header {
+    background-color: #008cb6;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(90deg, rgb(255, 255, 255), #008cb6);
+}
+
+.header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo img {
+    height: 40px;
+}
+
+/* Menu principal */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white; 
+    font-size: 1.15rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: rgb(255, 255, 135); /* Bleu vif */
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #ffffff;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Menu mobile */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Animation du menu mobile */
+.menu-icon.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-icon.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #008cb6;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header {
+    animation: fadeInDown 0.5s ease-out;
+}
+/* Style pour le titre h1 */
+.debut h1 {
+    margin-left: 50px;
+    font-size: 2.5rem;
+    color: rgb(10,12,30);
+    margin-bottom: 20px;
+    width: 100%;
+}
+.degrade {
+    background: linear-gradient(90deg, rgb(0, 68, 104),rgb(191, 191, 191), #008cb6);
+    -webkit-background-clip: text; /* Applique le dégradé au texte */
+    -webkit-text-fill-color: transparent; /* Rend le texte transparent */
+    font-size: 3rem;
+    font-weight: bold;
+}
+/* Style pour le texte sous le titre */
+.debut p {
+    margin-left: 50px;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+/* Style pour le bouton */
+.btn-decouvrir {
+    margin-left: 50px;
+    background-color:#008cb6;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    box-shadow: 2px 2px 8px rgb(180, 180, 180);
+    margin-bottom: 10px;
+}
+
+.btn-decouvrir:hover {
+    background-color: #ffffff;
+    color: #008cb6;
+ }
+
+/* Défilement fluide */
+html {
+    scroll-behavior: smooth;
+}
+/* Section principale */
+.debut {
+    display: flex;
+    flex-wrap: wrap; /* Permet le retour à la ligne sur petits écrans */
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px; /* Espacement entre les éléments */
+}
+
+.texte {
+    flex: 1 1 50%; /* Prend 50% de l'espace disponible */
+    min-width: 300px; /* Largeur minimale pour éviter le débordement */
+}
+
+.grdImage {
+    flex: 1 1 40%; /* Prend 40% de l'espace disponible */
+    text-align: center;
+}
+
+.grdImage img {
+    margin-top: 10px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Section des services */
+.service {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    padding: 40px;
+    margin-top: 100px;
+}
+
+.formation {
+    background-color: white;
+    border: 1px solid rgb(213, 213, 213);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden; /* Empêche le débordement */
+}
+.formation h4{
+    color: black;
+    font-size: 1.2rem;
+}
+.formation img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.formation p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.formation button {
+    background-color:#008cb6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 100%;
+    transition: background-color 0.3s ease;
+    box-shadow: 2px 2px 8px #008cb6;
+}
+
+.formation button:hover {
+    background-color: #ffffff;
+    color: #008cb6;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .debut {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .texte, .grdImage {
+        flex: 1 1 100%; /* Prend 100% de l'espace sur petits écrans */
+    }
+    .debut h1, .debut p, .btn-decouvrir{
+        margin-left:5px ;
+    }
+}
+
+/* Animation de fondu */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animation de déplacement vers le haut */
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Classe pour appliquer l'animation de fondu */
+.fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Classe pour appliquer l'animation de déplacement */
+.slide-up {
+    animation: slideUp 1s ease-out forwards;
+}
+
+/* Masquer les éléments par défaut */
+.hidden {
+    opacity: 0;
+}
+
+/* Section Pourquoi choisir BEAT */
+.pourquoi-beat {
+    padding: 100px 20px;
+    background-color: #f0f4f8; /* Fond légèrement bleuté */
+    text-align: center;
+}
+
+.pourquoi-beat .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pourquoi-beat h2 {
+    font-size: 2rem;
+    color: #002366; /* Bleu foncé */
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.pourquoi-beat .sous-titre {
+    font-size: 1.2rem;
+    color: #4a5568; /* Gris foncé */
+    margin-bottom: 80px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.avantages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.avantage {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tout_savoir {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.branchr {
+   padding: 20px;
+   border: 1px solid rgb(211, 211, 211);
+}
+li, ul{
+    text-decoration: none;
+    text-align: start;
+    padding: 10px;
+    padding-left: 15px;
+}
+.avantage:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.avantage .numero {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #0073e6; /* Bleu vif */
+    opacity: 0.1;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 1;
+}
+
+.avantage h3 {
+    font-size: 1.8rem;
+    color: #002366; /* Bleu foncé */
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+.avantage p {
+    font-size: 1rem;
+    color: #4a5568; /* Gris foncé */
+    line-height: 1.6;
+    position: relative;
+    z-index: 2;
+}
+
+/* Footer */
+.footer {
+    background-color: #002366; /* Bleu foncé */
+    color: #ffffff;
+    padding: 60px 20px 20px;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(90deg, rgb(122, 122, 122), #008cb6);
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.footer-section {
+    margin-bottom: 30px;
+}
+
+.footer-logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.footer-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+.footer h4 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.footer-links, .footer-contact {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li, .footer-contact li {
+    margin-bottom: 10px;
+}
+
+.footer-links a, .footer-contact a {
+    color: #ffffff;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover, .footer-contact a:hover {
+    opacity: 1;
+}
+
+.footer-contact i {
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-socials a {
+    color: #ffffff;
+    font-size: 1.2rem;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.footer-socials a:hover {
+    opacity: 1;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.footer {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Style pour la section À propos */
+.a-propos {
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.a-propos .container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espace entre les sections */
+}
+
+.a-propos h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1%;
+    width: 100%; /* Prend toute la largeur */
+}
+
+.a-propos .sous-titre {
+    font-size: 1.2rem;
+    color: #4a5568;
+    margin-bottom: 60px;
+    width: 100%; /* Prend toute la largeur */
+}
+
+/* Sections Mission et Équipe */
+.mission, .equipe {
+    margin-bottom: 60px;
+    text-align: left;
+    flex: 1; /* Prend la moitié de l'espace disponible */
+}
+
+.mission h2, .equipe h2 {
+    font-size: 2rem;
+    color: rgb(0, 128, 157);
+    margin-bottom: 20px;
+}
+
+.mission p, .equipe p {
+    font-size: 1.1rem;
+    color: #4a5568;
+    line-height: 1.8;
+}
+
+/* Formulaire d'inscription */
+.formulaire-inscription {
+    background-color: #f0f4f8;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: left;
+    width: 100%; /* Prend toute la largeur par défaut */
+}
+
+.formulaire-inscription h2 {
+    font-size: 2rem;
+    color: rgb(0, 128, 157);
+    margin-bottom: 20px;
+}
+
+.formulaire-inscription p {
+    font-size: 1.1rem;
+    color: #4a5568;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    color: #002366;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.btn-inscription {
+    background-color: rgb(0, 128, 157);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-inscription:hover {
+    background-color:white;
+    color:#008cb6;
+    box-shadow: 2px 2px 4px#008cb6;
+}
+
+/* Media Query pour les grands écrans */
+@media (min-width: 768px) {
+    .a-propos .container {
+        flex-direction: row; /* Alignement horizontal */
+    }
+
+    .mission, .equipe {
+        flex: 1; /* Prend la moitié de l'espace disponible */
+    }
+
+    .formulaire-inscription {
+        width: 60%; /* Réduit la largeur du formulaire sur les grands écrans */
+        margin: 0 auto; /* Centre le formulaire */
+    }
+}
+
+/* Style pour la section Contact */
+.contact {
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.contact .container {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px; /* Espace entre les sections */
+}
+
+.contact h1 {
+    font-size: 2.5rem;
+    color: #002366;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.contact .sous-titre {
+    font-size: 1.2rem;
+    color: #4a5568;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+/* Formulaire de contact */
+.formulaire-contact {
+    flex: 1 1 60%; /* Prend 60% de l'espace */
+    background-color: #f0f4f8;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: left;
+}
+
+.formulaire-contact .form-group {
+    margin-bottom: 20px;
+}
+
+.formulaire-contact label {
+    display: block;
+    font-size: 1rem;
+    color: #002366;
+    margin-bottom: 5px;
+}
+
+.formulaire-contact input,
+.formulaire-contact textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.formulaire-contact textarea {
+    resize: vertical;
+}
+
+.btn-contact {
+    background-color:#008cb6;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-contact:hover {
+    background-color: white;
+    color: #008cb6;
+}
+
+/* Informations de contact */
+.informations-contact {
+    flex: 1 1 30%; /* Prend 30% de l'espace */
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.informations-contact h2 {
+    font-size: 1.8rem;
+    color: #008cb6;
+    margin-bottom: 20px;
+}
+
+.informations-contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+.informations-contact ul li {
+    font-size: 1rem;
+    color: #4a5568;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.informations-contact ul li i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+    color: #002366;
+}
+
+.reseaux-sociaux {
+    margin-top: 30px;
+}
+
+.reseaux-sociaux h2 {
+    font-size: 1.8rem;
+    color: #008cb6;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #008cb6;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: rgb(192, 192, 192);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .formulaire-contact, .informations-contact {
+        flex: 1 1 100%; /* Prend 100% de l'espace sur petits écrans */
+    }
+}
+
+
+.background-image {
+    background-image: url('bg-02.png'); /* Remplacez par votre image */
+    background-size: cover;
+    background-position: center;
+    height: 50vh; /* Utilisez 100vh pour couvrir toute la hauteur de la vue */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative; /* Position relative pour permettre le positionnement absolu de .content */
+}
+.backgroundimage {
+    background-image: url('image2.png'); /* Remplacez par votre image */
+    background-size: cover;
+    background-position: center;
+    height: 50vh; /* Utilisez 100vh pour couvrir toute la hauteur de la vue */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative; /* Position relative pour permettre le positionnement absolu de .content */
+}
+.background-image h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: white;
+}
+.backgroundimage h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: white;
+}
+.backgroundimage p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #ffffff;
+    background-color: #008cb6; /* Couleur du bouton */
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 50px;
+}
+.cta-button:hover {
+    color: #008cb6;
+    background-color: white;
+    box-shadow: 2px 2px 4px #008cb6;
+}
+
+.content {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    z-index: 2;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    width: 100%;
+    background-color: white; /* Fond blanc pour la section des statistiques */
+    box-shadow: 2px 2px 8px rgb(168, 168, 168);
+    border-radius: 10px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.number {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.label {
+    font-size: 1.2em;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .stats {
+        flex-direction: column;
+    }
+
+    .stat {
+        margin-bottom: 20px;
+    }
+    .service {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+        gap: 20px;
+        padding: 40px;
+        margin-top: 380px;
+    }
+}
+

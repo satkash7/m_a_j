@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Contact - BEAT</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="beat r.png" alt="Logo BEAT">
+            </a>
+    
+            <!-- Menu principal -->
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="A_propos.html" class="nav-link">À propos</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+            </nav>
+    
+            <!-- Bouton de menu mobile -->
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section principale -->
+    <main>
+        <!-- Section Contact -->
+        <section class="contact">
+            <div class="backgroundimage">
+                <h1 >Contactez-nous</h1>
+                <p >Nous sommes à votre écoute pour répondre à vos questions et vous accompagner dans vos projets.</p>
+                
+            </div>
+            <div class="container">
+                <!-- Formulaire de contact -->
+                <div class="formulaire-contact">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="nom">Nom complet</label>
+                            <input type="text" id="nom" name="nom" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Adresse e-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="sujet">Sujet</label>
+                            <input type="text" id="sujet" name="sujet" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-contact">Envoyer</button>
+                    </form>
+                </div>
+
+                <!-- Informations de contact -->
+                <div class="informations-contact">
+                    <h2>Coordonnées</h2>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Goma, Nord-Kivu, RDC</li>
+                        <li><i class="fas fa-phone"></i> +243 995 277 023</li>
+                        <li><i class="fas fa-envelope"></i> beatexpertise@gmail.com</li>
+                    </ul>
+                    <div class="reseaux-sociaux">
+                        <h2>Suivez-nous</h2>
+                        <div class="social-icons">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <!-- Section 1 : Logo et description -->
+            <div class="footer-section">
+                <img src="beat r.png" alt="Logo BEAT" class="footer-logo">
+                <p class="footer-description">
+                    BEAT est un bureau d'expertise et d'accompagnement technique basé à Goma, dédié à offrir des solutions innovantes pour le développement technologique de la région.
+                </p>
+            </div>
+    
+            <!-- Section 2 : Liens rapides -->
+            <div class="footer-section">
+                <h4>Liens rapides</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="A_propos.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+    
+            <!-- Section 3 : Coordonnées -->
+            <div class="footer-section">
+                <h4>Coordonnées</h4>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-map-marker-alt"></i> Goma, Nord-Kivu, RDC</li>
+                    <li><i class="fas fa-phone"></i> +243 995 277 023</li>
+                    <li><i class="fas fa-envelope"></i> beatexpertise@gmail.com</li>
+                </ul>
+            </div>
+    
+            <!-- Section 4 : Réseaux sociaux -->
+            <div class="footer-section">
+                <h4>Suivez-nous</h4>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Section 5 : Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2023 BEAT. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="mlc_chatinlie_styletag" rel="stylesheet" href="https://s3.mylivechat.com/livechat2/chatinline.css?&amp;culture=fr-FR&amp;mlcv=3017&amp;template=12">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Inclure la bibliothèque Odometer -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/themes/odometer-theme-minimal.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>BEAT - Bureau d'Expertise et d'Accompagnement Technique</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="beat r.png" alt="Logo BEAT">
+            </a>
+    
+            <!-- Menu principal -->
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="A_propos.html" class="nav-link">À propos</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+    
+            <!-- Bouton de menu mobile -->
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section principale -->
+    <main>
+        <!-- Section image + texte -->
+        <section class="debut">
+            <div class="texte">
+                <h1 class="degrade">Bienvenue dans BEAT</h1>
+                <p><strong>BEAT</strong> est un bureau d'expertise et d'accompagnement technique basé à <strong>Goma</strong>, au Nord-Kivu, en République Démocratique du Congo, dédié à offrir des solutions innovantes et un soutien spécialisé pour le développement technologique de la région.</p>
+                <a href="#services" class="btn-decouvrir">Découvrez nos services</a>
+            </div>
+            <div class="grdImage">
+                <img src="bureau2.jpg" alt="Bureau BEAT à Goma" loading="lazy">
+            </div>
+        </section>
+
+        <div class="background-image">
+            <h1>Vivez une expérience impeccable</h1>
+            <button class="cta-button">En savoir plus</button>
+        </div>
+        <div class="content">
+            <div class="stats">
+                <div class="stat">
+                    <span class="number" data-target="3">0</span>+
+                    <span class="label">Years Experience</span>
+                </div>
+                <div class="stat">
+                    <span class="number" data-target="100">0</span>
+                    <span class="label">Project Completed</span>
+                </div>
+                <div class="stat">
+                    <span class="number" data-target="15">0</span>+
+                    <span class="label">Consultation</span>
+                </div>
+                <div class="stat">
+                    <span class="number" data-target="50">0</span>+
+                    <span class="label">Happy Clients</span>
+                </div>
+            </div>
+        </div>
+
+        
+        <!-- Section des services -->
+        <section id="services" class="service">
+            <div class="formation hidden">
+                <img src="environnement.png" alt="Icône environnement">
+                <h4>changement climatique</h4>
+                <button onclick="redirection('climat')">en savoir plus</button>
+            </div>
+            <div class="formation hidden">
+                <img src="entreprenariat.png" alt="Icône entrepreneuriat">
+                <h4>entrepreneuriat</h4>
+                <button onclick="redirection('entrepreneuriat')">en savoir plus</button>
+            </div>
+            <div class="formation hidden">
+                <img src="catastrophe.png" alt="Icône réduction des risques">
+                <h4>réduction des risques de catastrophes</h4>
+                <button onclick="redirection('reduction')">en savoir plus</button>
+            </div>
+            <div class="formation hidden">
+                <img src="platform.png" alt="Icône innovation et technologie">
+                <h4>innovation technologique</h4>
+                <button onclick="redirection('innovation')">en savoir plus</button>
+            </div>
+            <div class="formation hidden">
+                <img src="networking.png" alt="Icône communication">
+                <h4>communication pour le changement de comportement</h4>
+                <button onclick="redirection('communication')">en savoir plus</button>
+            </div>
+            <div class="formation hidden">
+                <img src="personal-data.png" alt="Icône protection des personnes">
+                <h4>protection des personnes et de l'environnement</h4>
+                <button onclick="redirection()">en savoir plus</button>
+            </div>
+        </section>
+        <section class="pourquoi-beat">
+            <div class="container">
+                <h2><strong>Pourquoi choisir BEAT ?</strong></h2>
+                <p class="sous-titre">Découvrez ce qui fait de nous le partenaire idéal pour vos projets techniques et innovants.</p>
+                <div class="avantages">
+                    <div class="avantage">
+                        <div class="numero">01</div>
+                        <h3>Expertise inégalée</h3>
+                        <p>Notre équipe d'experts certifiés vous apporte des solutions techniques précises et fiables, adaptées à vos besoins.</p>
+                    </div>
+                    <div class="avantage">
+                        <div class="numero">02</div>
+                        <h3>Innovation au cœur</h3>
+                        <p>Nous repoussons les limites de la technologie pour vous offrir des solutions modernes et disruptives.</p>
+                    </div>
+                    <div class="avantage">
+                        <div class="numero">03</div>
+                        <h3>Accompagnement sur mesure</h3>
+                        <p>De la conception à la réalisation, nous vous guidons à chaque étape pour garantir votre réussite.</p>
+                    </div>
+                    <div class="avantage">
+                        <div class="numero">04</div>
+                        <h3>Engagement local</h3>
+                        <p>Enracinés à Goma, nous comprenons les défis locaux et nous engageons à contribuer au développement de notre région.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <!-- Section 1 : Logo et description -->
+            <div class="footer-section">
+                <img src="beat r.png" alt="Logo BEAT" class="footer-logo">
+                <p class="footer-description">
+                    BEAT est un bureau d'expertise et d'accompagnement technique basé à Goma, dédié à offrir des solutions innovantes pour le développement technologique de la région.
+                </p>
+            </div>
+    
+            <!-- Section 2 : Liens rapides -->
+            <div class="footer-section">
+                <h4>Liens rapides</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="A_propos.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+    
+            <!-- Section 3 : Coordonnées -->
+            <div class="footer-section">
+                <h4>Coordonnées</h4>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-map-marker-alt"></i> Goma, Nord-Kivu, RDC</li>
+                    <li><i class="fas fa-phone"></i> +243 995 277 023</li>
+                    <li><i class="fas fa-envelope"></i>  beatexpertise@gmail.com 
+                    </li>
+                </ul>
+            </div>
+    
+            <!-- Section 4 : Réseaux sociaux -->
+            <div class="footer-section">
+                <h4>Suivez-nous</h4>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Section 5 : Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2023 BEAT. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+
+<script src="app.js"></script>
+</html>
