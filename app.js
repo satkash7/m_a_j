@@ -62,20 +62,18 @@ window.addEventListener('load', () => {
 });
 
 function redirection(section) {
-    // URL de la page cible
-    const urlPageCible = "A_propos.html";
+    // Liste des sections valides
+    const sectionsValides = ["climat", "entrepreneuriat", "reduction", "innovation", "communication"];
 
     // Vérifier si la section est valide
-    const sectionsValides = ["climat", "entrepreneuriat", "reduction", "innovation", "communication"];
     if (!sectionsValides.includes(section)) {
         console.error("Section non valide");
         return; // Arrêter la fonction si la section n'est pas valide
     }
 
-    // Redirection vers la page cible avec l'ancre
-    window.location.href = `${urlPageCible}#${section}`;
+    // Rediriger vers A_propos.html avec l'ancre
+    window.location.href = `A_propos.html#${section}`;
 }
-
 // Validation du formulaire (si vous ajoutez un formulaire plus tard)
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('inscription-form');
@@ -87,5 +85,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 alert('Veuillez remplir votre nom.');
             }
         });
+    }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Récupérer l'ancre dans l'URL (ex: #climat)
+    const hash = window.location.hash.substring(1); // Retire le "#"
+
+    // Masquer toutes les sections
+    const sections = document.querySelectorAll('.service-section');
+    sections.forEach(section => {
+        section.style.display = 'none';
+    });
+
+    // Afficher uniquement la section correspondante
+    if (hash) {
+        const targetSection = document.getElementById(hash);
+        if (targetSection) {
+            targetSection.style.display = 'block'; // Afficher la section
+        } else {
+            console.error("Section non trouvée");
+        }
     }
 });
