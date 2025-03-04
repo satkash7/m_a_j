@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link id="mlc_chatinlie_styletag" rel="stylesheet" href="https://s3.mylivechat.com/livechat2/chatinline.css?&amp;culture=fr-FR&amp;mlcv=3017&amp;template=12">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Inclure la bibliothèque Odometer -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/themes/odometer-theme-minimal.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.8/odometer.min.js"></script>
     <link rel="stylesheet" href="styles.css">
@@ -14,12 +13,9 @@
 <body>
     <header class="header">
         <div class="container">
-            <!-- Logo -->
             <a href="index.html" class="logo">
                 <img src="beat r.png" alt="Logo BEAT">
             </a>
-    
-            <!-- Menu principal -->
             <nav class="nav">
                 <ul class="nav-links">
                     <li><a href="index.html" class="nav-link">Accueil</a></li>
@@ -27,8 +23,6 @@
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
-    
-            <!-- Bouton de menu mobile -->
             <div class="menu-icon" onclick="toggleMenu()">
                 <div class="bar"></div>
                 <div class="bar"></div>
@@ -37,13 +31,11 @@
         </div>
     </header>
 
-    <!-- Section principale -->
     <main>
-        <!-- Section image + texte -->
         <section class="debut">
             <div class="texte">
                 <h1 class="degrade">Bienvenue dans BEAT</h1>
-                <p><strong>BEAT</strong> est un bureau d'expertise et d'accompagnement technique basé à <strong>Goma</strong>, au Nord-Kivu, en République Démocratique du Congo, dédié à offrir des solutions innovantes et un soutien spécialisé pour le développement technologique de la région.</p>
+                <p><strong>BEAT</strong> est un bureau d'expertise et d'accompagnement technique basé à <strong>Goma</strong>, au Nord-Kivu, en République Démocratique du Congo, dédié à offrir des solutions innovantes et un soutien spécialisé. </p>
                 <a href="#services" class="btn-decouvrir">Découvrez nos services</a>
             </div>
             <div class="grdImage">
@@ -51,63 +43,84 @@
             </div>
         </section>
 
-        <div class="background-image">
-            <h1>Vivez une expérience impeccable</h1>
-            <button class="cta-button">En savoir plus</button>
-        </div>
-        <div class="content">
-            <div class="stats">
-                <div class="stat">
-                    <span class="number" data-target="3">0</span>+
-                    <span class="label">Years Experience</span>
-                </div>
-                <div class="stat">
-                    <span class="number" data-target="100">0</span>
-                    <span class="label">Project Completed</span>
-                </div>
-                <div class="stat">
-                    <span class="number" data-target="15">0</span>+
-                    <span class="label">Consultation</span>
-                </div>
-                <div class="stat">
-                    <span class="number" data-target="50">0</span>+
-                    <span class="label">Happy Clients</span>
-                </div>
-            </div>
-        </div>
-
-        
-        <!-- Section des services -->
         <section id="services" class="service">
             <div class="formation hidden">
                 <img src="environnement.png" alt="Icône environnement">
                 <h4>changement climatique</h4>
-                <button onclick="redirection('climat')">en savoir plus</button>
+                <div class="toutAfficher" style="display: none;">
+                    <ul>
+                        <li>Évaluation de l'impact environnemental des projets et des affaires</li>
+                        <li>Proposition des pratiques écologiques</li>
+                        <li>Coaching et mentorat sur la gestion sensible à l'environnement</li>
+                    </ul>
+                </div>
+                <button onclick="toggleContent(this)" aria-label="Afficher ou masquer le contenu">en savoir plus</button>
             </div>
+            
             <div class="formation hidden">
                 <img src="entreprenariat.png" alt="Icône entrepreneuriat">
                 <h4>entrepreneuriat</h4>
-                <button onclick="redirection('entrepreneuriat')">en savoir plus</button>
+                <div class="toutAfficher" style="display: none;">
+                    <ul>
+                        <li>Accompagnement dans l'élaboration des plans d'affaires</li>
+                        <li>Proposition des méthodes de gestion inovante</li>
+                    </ul>
+                </div>
+                <button onclick="toggleContent(this)" aria-label="Afficher ou masquer le contenu">en savoir plus</button>
             </div>
+
             <div class="formation hidden">
                 <img src="catastrophe.png" alt="Icône réduction des risques">
                 <h4>réduction des risques de catastrophes</h4>
-                <button onclick="redirection('reduction')">en savoir plus</button>
+                <div class="toutAfficher" style="display: none;">
+                    <ul>
+                        <li>Modélisation de la surveillance des aléas</li>
+                        <li>Accompagnement des organisations dans la gestion sensible aux risques</li>
+                        <li>Proposition des méthodes de gestion inovante</li>
+                        <li>Development des outils d'analyse de vulnérabilités des enjeux et risques de catastrophes</li>
+                        <li>Formation dans la gestion de risques de catastrophes et des urgences</li>
+                        <li>Appui à l'élaboration des plans de contigence</li>
+                        <li>Appui à l'élaboration de plans de continuité des affaires</li>
+                        <li>Élaboration des modules adaptés aux besoins dans le domaine de gestion des risques</li>
+                        <li>Accompagnement dans l'élaboration des plans et stratégies de sécurité des organisations et entreprises</li>
+                    </ul>
+                </div>
+                <button onclick="toggleContent(this)" aria-label="Afficher ou masquer le contenu">en savoir plus</button>
             </div>
             <div class="formation hidden">
                 <img src="platform.png" alt="Icône innovation et technologie">
                 <h4>innovation technologique</h4>
-                <button onclick="redirection('innovation')">en savoir plus</button>
+                <div class="toutAfficher" style="display: none;">
+                    <ul>
+                        <li>Accompagnement dans la pensée design</li>
+                        <li>Accompagnement dans l'utilisation éthique de l'intelligence artificielle</li>
+                        <li>Development des applications dans les domaines divers</li>
+                        <li>Accompagnement dans le Suivi à temps réel ( Real Time Monitoring)</li>
+                    </ul>
+                </div>
+                <button onclick="toggleContent(this)" aria-label="Afficher ou masquer le contenu">en savoir plus</button>
             </div>
             <div class="formation hidden">
                 <img src="networking.png" alt="Icône communication">
                 <h4>communication pour le changement de comportement</h4>
-                <button onclick="redirection('communication')">en savoir plus</button>
+                <div class="toutAfficher" style="display: none;">
+                    <ul>
+                        <li>Development des modules adaptés aux besoins des divers groupes</li>
+                        <li>Accompagnement des groupes et des personnes à développer des plans visant le changement des comportements</li>
+                        <li>Coaching et mentorat dans la motivation des groupes</li>
+                    </ul>
+                </div>
+                <button onclick="toggleContent(this)" aria-label="Afficher ou masquer le contenu">en savoir plus</button>
             </div>
             <div class="formation hidden">
                 <img src="personal-data.png" alt="Icône protection des personnes">
                 <h4>protection des personnes et de l'environnement</h4>
-                <button onclick="redirection()">en savoir plus</button>
+                <div class="toutAfficher" style="display: none;">
+                    <ul>
+                        <li>Contenu à ajouter ici</li>
+                    </ul>
+                </div>
+                <button onclick="toggleContent(this)" aria-label="Afficher ou masquer le contenu">en savoir plus</button>
             </div>
         </section>
         <section class="pourquoi-beat">
@@ -142,15 +155,12 @@
 
     <footer class="footer">
         <div class="container">
-            <!-- Section 1 : Logo et description -->
             <div class="footer-section">
                 <img src="beat r.png" alt="Logo BEAT" class="footer-logo">
                 <p class="footer-description">
                     BEAT est un bureau d'expertise et d'accompagnement technique basé à Goma, dédié à offrir des solutions innovantes pour le développement technologique de la région.
                 </p>
             </div>
-    
-            <!-- Section 2 : Liens rapides -->
             <div class="footer-section">
                 <h4>Liens rapides</h4>
                 <ul class="footer-links">
@@ -159,19 +169,14 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
-    
-            <!-- Section 3 : Coordonnées -->
             <div class="footer-section">
                 <h4>Coordonnées</h4>
                 <ul class="footer-contact">
                     <li><i class="fas fa-map-marker-alt"></i> Goma, Nord-Kivu, RDC</li>
                     <li><i class="fas fa-phone"></i> +243 995 277 023</li>
-                    <li><i class="fas fa-envelope"></i>  beatexpertise@gmail.com 
-                    </li>
+                    <li><i class="fas fa-envelope"></i> beatexpertise@gmail.com</li>
                 </ul>
             </div>
-    
-            <!-- Section 4 : Réseaux sociaux -->
             <div class="footer-section">
                 <h4>Suivez-nous</h4>
                 <div class="footer-socials">
@@ -182,8 +187,6 @@
                 </div>
             </div>
         </div>
-    
-        <!-- Section 5 : Copyright -->
         <div class="footer-bottom">
             <p>&copy; 2023 BEAT. Tous droits réservés.</p>
         </div>
