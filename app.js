@@ -15,8 +15,7 @@ function isElementInViewport(el) {
         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
-}
-
+  }
 // Fonction pour déclencher les animations
 function handleScrollAnimations() {
     const elements = document.querySelectorAll('.hidden');
@@ -27,31 +26,6 @@ function handleScrollAnimations() {
         }
     });
 }
-
-// Fonction pour animer les nombres
-function animateNumbers() {
-    const numbers = document.querySelectorAll('.number');
-    const speed = 200; // Ajustez la vitesse ici
-
-    numbers.forEach(number => {
-        const target = +number.getAttribute('data-target');
-        const increment = target / speed;
-        let current = 0;
-
-        const updateNumber = () => {
-            if (current < target) {
-                current += increment;
-                number.innerText = Math.ceil(current);
-                requestAnimationFrame(updateNumber);
-            } else {
-                number.innerText = target;
-            }
-        };
-
-        updateNumber();
-    });
-}
-
 // Écouter l'événement de défilement pour les animations
 window.addEventListener('scroll', handleScrollAnimations);
 
@@ -61,19 +35,18 @@ window.addEventListener('load', () => {
     animateNumbers();
 });
 
-function redirection(section) {
-    // Liste des sections valides
-    const sectionsValides = ["climat", "entrepreneuriat", "reduction", "innovation", "communication"];
-
-    // Vérifier si la section est valide
-    if (!sectionsValides.includes(section)) {
-        console.error("Section non valide");
-        return; // Arrêter la fonction si la section n'est pas valide
+// Fonction pour afficher/masquer le contenu des services
+function toggleContent(button) {
+    const content = button.previousElementSibling;
+    if (content.style.display === 'none' || content.style.display === '') {
+        content.style.display = 'block';
+        button.textContent = 'Masquer';
+    } else {
+        content.style.display = 'none';
+        button.textContent = 'en savoir plus';
     }
-
-    // Rediriger vers A_propos.html avec l'ancre
-    window.location.href = `A_propos.html#${section}`;
 }
+
 // Validation du formulaire (si vous ajoutez un formulaire plus tard)
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('inscription-form');
@@ -86,25 +59,4 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    // Récupérer l'ancre dans l'URL (ex: #climat)
-    const hash = window.location.hash.substring(1); // Retire le "#"
-
-    // Masquer toutes les sections
-    const sections = document.querySelectorAll('.service-section');
-    sections.forEach(section => {
-        section.style.display = 'none';
-    });
-
-    // Afficher uniquement la section correspondante
-    if (hash) {
-        const targetSection = document.getElementById(hash);
-        if (targetSection) {
-            targetSection.style.display = 'block'; // Afficher la section
-        } else {
-            console.error("Section non trouvée");
-        }
-    }
-});
+})
