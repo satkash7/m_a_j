@@ -283,7 +283,7 @@ html {
 
 /* Responsive design */
 @media (max-width: 768px) {
-    .debut {
+    .debut, .deux {
         flex-direction: column;
         text-align: center;
     }
@@ -817,6 +817,11 @@ li, ul{
     margin-bottom: 20px;
     color: white;
 }
+
+.deux{
+    display: flex;
+}
+
 
 
 
