@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Style en cas de succès */
+        .success {
+            margin-top: 10px;
+            color: green;
+            background-color: rgba(0, 255, 0, 0.1); /* Vert transparent */
+        }
+
+        /* Style en cas d'erreur */
+        .error {
+            margin-top: 10px;
+            color: red;
+            background-color: rgba(255, 0, 0, 0.1); /* Rouge transparent */
+        }
+    </style>
     <title>À propos - BEAT</title>
 </head>
 <body>
@@ -54,6 +69,7 @@
                         <h2>Notre Équipe</h2>
                         <p>Notre équipe est composée d'experts certifiés dans divers domaines techniques, passionnés par l'innovation et déterminés à apporter des solutions concrètes aux problèmes locaux. Nous travaillons ensemble pour offrir des services de qualité et des résultats durables.</p>
                     </div>
+                    
                 </div>
                 <!-- Section Formulaire d'inscription -->
                 <div class="deux">
@@ -63,38 +79,39 @@
                     <div class="formulaire-inscription">
                         <div class="formulaireIns">
                             <h2>Inscrivez-vous à nos services</h2>
-                        <p>Vous souhaitez bénéficier de nos services ou en savoir plus ? Remplissez le formulaire ci-dessous et nous vous contacterons dans les plus brefs délais.</p>
-                        <form id="inscription-form">
-                            <div class="form-group">
-                                <label for="nom">Nom complet</label>
-                                <input type="text" id="nom" name="nom" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Adresse e-mail</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="service">Service choisi</label>
-                                <select id="service" name="service" required>
-                                    <option value="">Sélectionnez un service</option>
-                                    <option value="environnement">Environnement et changement climatique</option>
-                                    <option value="entrepreneuriat">Entrepreneuriat</option>
-                                    <option value="risques">Réduction des risques de catastrophes</option>
-                                    <option value="technologie">Innovation et technologie</option>
-                                    <option value="communication">Communication pour le changement</option>
-                                    <option value="protection">Protection des personnes et de l'environnement</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message (optionnel)</label>
-                                <textarea id="message" name="message" rows="5"></textarea>
-                            </div>
-                            <button type="submit" class="btn-inscription">Envoyer</button>
-                        </form>
+                            <p>Vous souhaitez bénéficier de nos services ou en savoir plus ? Remplissez le formulaire ci-dessous et nous vous contacterons dans les plus brefs délais.</p>
+                            <form id="inscription-form" onsubmit="submitForm(event)">
+                                <div class="form-group">
+                                    <label for="nom">Nom complet</label>
+                                    <input type="text" id="nom" name="nom" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Adresse e-mail</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="service">Service choisi</label>
+                                    <select id="service" name="service" required>
+                                        <option value="">Sélectionnez un service</option>
+                                        <option value="environnement">Environnement et changement climatique</option>
+                                        <option value="entrepreneuriat">Entrepreneuriat</option>
+                                        <option value="risques">Réduction des risques de catastrophes</option>
+                                        <option value="technologie">Innovation et technologie</option>
+                                        <option value="communication">Communication pour le changement</option>
+                                        <option value="protection">Protection des personnes et de l'environnement</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message (optionnel)</label>
+                                    <textarea id="message" name="message" rows="5"></textarea>
+                                </div>
+                                <button type="submit" class="btn-inscription">Envoyer</button>
+                            </form>
+                            <!-- Conteneur pour le message de résultat -->
+                            <div id="messageContainer"></div>
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
     </main>
 
@@ -145,7 +162,6 @@
             <p>&copy; 2023 BEAT. Tous droits réservés.</p>
         </div>
     </footer>
-
     <script src="app.js"></script>
 </body>
 </html>
