@@ -43,29 +43,54 @@
                 
             </div>
             <div class="container">
-                <!-- Formulaire de contact -->
-                <div class="formulaire-contact">
-                    <form id="contact-form">
-                        <div class="form-group">
-                            <label for="nom">Nom complet</label>
-                            <input type="text" id="nom" name="nom" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Adresse e-mail</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="sujet">Sujet</label>
-                            <input type="text" id="sujet" name="sujet" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn-contact">Envoyer</button>
-                    </form>
-                </div>
-
+            <!-- Formulaire de contact -->
+             <style> 
+                /* Style pour le message */
+                #messageResultat {
+                    padding: 10px;
+                    border-radius: 5px;
+                    margin-top: 10px;
+                    text-align: center;
+                }
+        
+                /* Style en cas de succès */
+                .success {
+                    color: green;
+                    background-color: rgba(0, 255, 0, 0.1); /* Vert transparent */
+                }
+        
+                /* Style en cas d'erreur */
+                .error {
+                    color: red;
+                    background-color: rgba(255, 0, 0, 0.1); /* Rouge transparent */
+                }
+            </style>
+        </head>
+        <body>
+            <div class="formulaire-contact">
+                <form id="contact-form" onsubmit="submitForm(event)">
+                    <div class="form-group">
+                        <label for="nom">Nom complet</label>
+                        <input type="text" id="nom" name="nom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Adresse e-mail</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="sujet">Sujet</label>
+                        <input type="text" id="sujet" name="sujet" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-contact">Envoyer</button>
+                </form>
+                <!-- Conteneur pour le message de résultat -->
+                <div id="messageContainer"></div>
+            </div>
+        
                 <!-- Informations de contact -->
                 <div class="informations-contact">
                     <h2>Coordonnées</h2>
@@ -135,7 +160,7 @@
             <p>&copy; 2023 BEAT. Tous droits réservés.</p>
         </div>
     </footer>
-
+    <div id="message-container"></div>
     <script src="app.js"></script>
 </body>
 </html>
