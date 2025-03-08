@@ -59,4 +59,46 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-})
+});
+
+function submitForm(event) {
+    event.preventDefault(); // Empêcher le rechargement de la page
+
+    // Récupérer les données du formulaire
+    const formData = new FormData(document.getElementById('inscription-form'));
+
+    // Envoyer les données via Fetch API
+    fetch('traitement_inscription.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Sélectionner le conteneur du message
+        const messageContainer = document.getElementById('messageContainer');
+
+        // Supprimer tout message existant
+        messageContainer.innerHTML = '';
+
+        // Créer un nouvel élément h3 pour le message
+        const messageResultat = document.createElement('h3');
+        messageResultat.id = 'messageResultat';
+        messageResultat.textContent = data.message;
+
+        // Appliquer le style en fonction du statut
+        if (data.status === "success") {
+            messageResultat.className = "success";
+            // Réinitialiser le formulaire
+            document.getElementById('inscription-form').reset();
+        } else {
+            messageResultat.className = "error";
+        }
+
+        // Ajouter le message au conteneur
+        messageContainer.appendChild(messageResultat);
+    })
+    .catch(error => {
+        console.error("Erreur lors de l'envoi du formulaire :", error);
+    });
+}
+
