@@ -643,10 +643,11 @@ li, ul{
         flex: 1; /* Prend la moitié de l'espace disponible */
     }
 
-    .formulaire-inscription {
+    .formulaire-inscription, .act {
         width: 60%; /* Réduit la largeur du formulaire sur les grands écrans */
         margin: 0 auto; /* Centre le formulaire */
     }
+    
 }
 
 /* Style pour la section Contact */
