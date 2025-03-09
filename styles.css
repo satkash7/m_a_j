@@ -821,7 +821,20 @@ li, ul{
 .deux{
     display: flex;
 }
-
+.act{
+    height: 100vh;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.act h3{
+    color: #008cb6;
+}
+.act p{
+    color: red;
+}
 
 
 
