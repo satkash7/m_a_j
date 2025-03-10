@@ -234,7 +234,7 @@ html {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
     gap: 20px;
-    padding: 40px;
+    padding: 20px;
 }
 
 .formation {
@@ -643,7 +643,7 @@ li, ul{
         flex: 1; /* Prend la moitié de l'espace disponible */
     }
 
-    .formulaire-inscription, .act {
+    .formulaire-inscription{
         width: 60%; /* Réduit la largeur du formulaire sur les grands écrans */
         margin: 0 auto; /* Centre le formulaire */
     }
@@ -835,6 +835,26 @@ li, ul{
 }
 .act p{
     color: red;
+}
+
+@media (max-width: 768px) {
+    .act h1 {
+        font-size: 2rem; /* Taille de police réduite pour les écrans moyens */
+    }
+
+    .act p {
+        font-size: 1rem; /* Taille de police réduite pour les écrans moyens */
+    }
+}
+
+@media (max-width: 480px) {
+    .act h1 {
+        font-size: 1.5rem; /* Taille de police réduite pour les petits écrans */
+    }
+
+    .act p {
+        font-size: 0.9rem; /* Taille de police réduite pour les petits écrans */
+    }
 }
 
 
