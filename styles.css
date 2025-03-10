@@ -822,6 +822,9 @@ li, ul{
 .deux{
     display: flex;
 }
+body .act{
+    height: 100vh;
+}
 .act{
     height: 100%;
     display: block;
@@ -829,8 +832,8 @@ li, ul{
     justify-content: center;
     align-items: center;
     align-content: center;
-    padding:20px
-    background-color:#008cb688;
+    padding: 20px;
+    background-color: #008cb688;
 }
 .act h3{
     color: #008cb6;
