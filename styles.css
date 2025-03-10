@@ -822,47 +822,27 @@ li, ul{
 .deux{
     display: flex;
 }
-body .act{
+.actua{
     height: 100vh;
-}
-.act{
-    height: 100%;
     display: block;
     text-align: center;
     justify-content: center;
     align-items: center;
     align-content: center;
     padding: 20px;
-    background-color: #008cb688;
+    
 }
+.act{
+    background-color: #008cb640; 
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #008cb6bc;
+}  
 .act h3{
-    color: #008cb6;
+    color: #008cb6bc;
 }
 .act p{
     color: red;
-}
-
-@media (max-width: 768px) {
-    .act h1 {
-        font-size: 2rem; /* Taille de police réduite pour les écrans moyens */
-    }
-
-    .act p {
-        font-size: 1rem; /* Taille de police réduite pour les écrans moyens */
-    }
-}
-
-@media (max-width: 480px) {
-    .act {
-        padding:20px;
-    }
-    .act h1 {
-        font-size: 1.5rem; /* Taille de police réduite pour les petits écrans */
-    }
-
-    .act p {
-        font-size: 0.9rem; /* Taille de police réduite pour les petits écrans */
-    }
 }
 
 
