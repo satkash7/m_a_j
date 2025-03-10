@@ -823,12 +823,14 @@ li, ul{
     display: flex;
 }
 .act{
-    height: 100vh;
+    height: 100%;
     display: block;
     text-align: center;
     justify-content: center;
     align-items: center;
     align-content: center;
+    padding:20px
+    background-color:#008cb688;
 }
 .act h3{
     color: #008cb6;
